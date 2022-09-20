@@ -18,10 +18,11 @@ export interface DuoCardProps {
 } 
 
 interface Prosp {
-  data: DuoCardProps
+  data: DuoCardProps;
+  onConnect: () => void;
 }
 
-export function DuoCard({data}: Prosp) {
+export function DuoCard({data, onConnect}: Prosp) {
   
   return (
     <View style={styles.container}>
@@ -44,6 +45,7 @@ export function DuoCard({data}: Prosp) {
       />
       <TouchableOpacity
         style={styles.button}
+        onPress={onConnect}
       >
         <GameController
           color={THEME.COLORS.TEXT}
