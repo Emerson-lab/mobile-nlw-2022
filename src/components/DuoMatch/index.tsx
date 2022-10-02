@@ -22,7 +22,8 @@ export function DuoMatch({ discord, onClose, ...rest }: Props) {
     await ClipBoard.setStringAsync(discord);
     Alert.alert('Discord copiado!', 'Usuário copiado para você colar no Discord e encontrar essa pessoa!')
     setIsCopy(false);
-  }
+  };
+  
   return (
     <Modal
       animationType='fade'
